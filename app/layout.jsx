@@ -1,9 +1,11 @@
+export const metadata = {
+    title: "Belajar Next.js Fundamental",
+    description: "Belajar Next.js dengan struktur App Router",
+};
+
 export default function Layout({ children }) { 
     return (
         <html lang="en">
-            <head>
-                <title>Learn Next.js Fundamental</title>
-            </head>
             <body>
                 <header>[header]</header>
                 <main>
