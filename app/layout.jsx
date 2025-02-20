@@ -23,7 +23,10 @@ export default async function Layout({ children }) {
                     <main>
                         {children}
                     </main>
-                    <footer>[footer]</footer>
+                    <footer>
+                        <hr />
+                        <span>I'm here to stay (Footer)</span>
+                    </footer>
                 </body>
             </html>
         </>
