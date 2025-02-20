@@ -10,10 +10,10 @@ export default async function Layout({ children }) {
     return (
         <>
             <html>
-                <body>
+                <body className="flex flex-col p-5 min-h-screen">
                     <header>
                         <nav>
-                            <ul>
+                            <ul className="flex gap-5">
                                 <li><Link href={"/"}>Home</Link></li>
                                 <li><Link href={"/blog"}>Blog</Link></li>
                                 <li><Link href={"/contact"}>Contact</Link></li>
@@ -21,11 +21,10 @@ export default async function Layout({ children }) {
                             </ul>
                         </nav>
                     </header>
-                    <main>
+                    <main className="py-5 grow">
                         {children}
                     </main>
-                    <footer>
-                        <hr />
+                    <footer className="border-t py-3 text-center text-xs">
                         <span>I'm here to stay (Footer)</span>
                     </footer>
                 </body>
