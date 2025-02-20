@@ -1,4 +1,4 @@
-// import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export const metadata = {
     title: "Belajar Next.js Fundamental",
@@ -10,7 +10,16 @@ export default async function Layout({ children }) {
         <>
             <html>
                 <body>
-                    <header>[header]</header>
+                    <header>
+                        <nav>
+                            <ul>
+                                <li><Link href={"/"}>Home</Link></li>
+                                <li><Link href={"/blog"}>Blog</Link></li>
+                                <li><Link href={"/contact"}>Contact</Link></li>
+                                <li><Link href={"/about"}>About</Link></li>
+                            </ul>
+                        </nav>
+                    </header>
                     <main>
                         {children}
                     </main>
