@@ -1,6 +1,6 @@
 import Card from "@/components/Card";
 import Heading from "@/components/Heading";
-import Link from "next/link";
+import PostCard from "@/components/PostCard";
 
 export const metadata = {
     title: "Blog - Belajar Next.js Fundamental"
@@ -11,7 +11,7 @@ export default function Blog() {
         <>
             <Heading>Blog</Heading>
             <p className="text-xl mb-3">List of Post</p>
-            <div className="grid xl:grid-cols-4 gap-4">
+            <div className="grid xl:grid-cols-4 gap-4 mb-20">
                 <Card
                     srcImage={"/images/landing5.jpg"}
                     title={"Belajar Next.js"}
@@ -31,7 +31,33 @@ export default function Blog() {
                     link={"/blog/latihan-route-next"}
                 />
             </div>
-        
+
+            <div>
+                <PostCard
+                    title={"Belajar Next.js"}
+                    href={"/blog/belajar-nextjs"}
+                    image={"/images/landing5.jpg"}
+                    description={"Membuat e-commerce from zero to hero"}
+                    date={"23-02-2025"}
+                    author={"@oyputra"}
+                />
+                <PostCard
+                    title={"Judul Berita"}
+                    href={"/blog/judul-berita"}
+                    image={"/images/landing6.jpg"}
+                    description={"Berita terbaru dari judul-judul berita yang relevan"}
+                    date={"23-02-2025"}
+                    author={"@oyputra"}
+                />
+                <PostCard
+                    title={"Latihan Route Next"}
+                    href={"/blog/latihan-route-next"}
+                    image={"/images/landing7.jpg"}
+                    description={"Membuat route pada next js dengan perbedaan-perbedaan metodenya"}
+                    date={"23-02-2025"}
+                    author={"@oyputra"}
+                />
+            </div>
         </>
     );
 }
