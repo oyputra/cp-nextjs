@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Navbar from "../components/Navbar";
 import "./global.css";
 
 export const metadata = {
@@ -10,16 +10,9 @@ export default async function Layout({ children }) {
     return (
         <>
             <html>
-                <body className="flex flex-col p-5 min-h-screen">
+                <body className="flex flex-col p-5 min-h-screen bg-cyan-50">
                     <header>
-                        <nav>
-                            <ul className="flex gap-5">
-                                <li><Link href={"/"}>Home</Link></li>
-                                <li><Link href={"/blog"}>Blog</Link></li>
-                                <li><Link href={"/contact"}>Contact</Link></li>
-                                <li><Link href={"/about"}>About</Link></li>
-                            </ul>
-                        </nav>
+                        <Navbar />                        
                     </header>
                     <main className="py-5 grow">
                         {children}
