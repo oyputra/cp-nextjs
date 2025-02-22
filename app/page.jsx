@@ -1,7 +1,8 @@
+import Heading from "../components/Heading";
 export default function Home() {
     return (
         <>
-            <h1>Framework Next.js</h1>
+            <Heading>Framework Next.js</Heading>
             <p>Hello, World!</p>
         </>
     );

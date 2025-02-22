@@ -17,11 +17,11 @@ export default function BlogLayout({ children })
                 <div>{children}</div>
             </div>
             <p>List of Posts</p>
-            <ul>
-                <li><Link href={"/blog"}>Blog</Link></li>
-                <li><Link href={"/blog/belajar-nextjs"}>Belajar Next Js</Link></li>
-                <li><Link href={"/blog/judul-berita"}>Judul Berita</Link></li>
-                <li><Link href={"/blog/latihan-route-next"}>Latihan Route Next</Link></li>
+            <ul className="flex gap-3 pt-5">
+                <li><Link href={"/blog"} className="text-gray-500 hover:underline">Blog</Link></li>
+                <li><Link href={"/blog/belajar-nextjs"} className="text-gray-500 hover:underline">Belajar Next Js</Link></li>
+                <li><Link href={"/blog/judul-berita"} className="text-gray-500 hover:underline">Judul Berita</Link></li>
+                <li><Link href={"/blog/latihan-route-next"} className="text-gray-500 hover:underline">Latihan Route Next</Link></li>
             </ul>
         </>
     );

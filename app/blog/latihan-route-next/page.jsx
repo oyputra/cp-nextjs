@@ -1,12 +1,14 @@
+import Heading from "../../../components/Heading";
+
 export const metadata = {
     title: "Judul Berita - Belajar Next.js Fundamental"
 }
 
-export default function JudulBerita() {
+export default function LatihanRouteNext() {
     return (
         <>
-            <h1>Judul Berita</h1>
-            <p>Halaman Judul Berita</p>
+            <Heading>Latihan Route Next</Heading>
+            <p>Halaman Latihan Route Next</p>
         </>
     );
 }
