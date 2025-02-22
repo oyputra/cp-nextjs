@@ -1,3 +1,5 @@
+import Heading from "../../../components/Heading";
+
 export const metadata = {
     title: "Judul Berita - Belajar Next.js Fundamental"
 }
@@ -5,7 +7,7 @@ export const metadata = {
 export default function JudulBerita() {
     return (
         <>
-            <h1>Judul Berita</h1>
+            <Heading>Judul Berita</Heading>
             <p>Halaman Judul Berita</p>
         </>
     );
