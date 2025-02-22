@@ -9,6 +9,7 @@ export default function BelajarNextJs() {
         <>
             <Heading>Belajar Next.js</Heading>
             <p>Halaman Belajar Next.js</p>
+            <img src="/images/landing5.jpg" alt="" width={640} height={360} className="my-3 rounded-xl" />
         </>
     );
 }

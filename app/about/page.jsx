@@ -9,6 +9,7 @@ export default function About() {
         <>
             <Heading>Tentang</Heading>
             <p>Halaman Tentang</p>
+            <img src="/images/landing2.jpg" alt="" width={640} height={360} className="my-3 rounded-xl" />
         </>
     );
 }
