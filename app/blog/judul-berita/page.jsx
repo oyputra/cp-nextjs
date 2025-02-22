@@ -1,4 +1,4 @@
-import Heading from "../../../components/Heading";
+import Heading from "@/components/Heading";
 
 export const metadata = {
     title: "Latihan Route Next - Belajar Next.js Fundamental"
