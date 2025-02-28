@@ -1,5 +1,6 @@
 import Heading from "@/components/Heading";
 import { readFile } from "fs/promises";
+import { marked } from "marked";
 import path from "path";
 
 export const metadata = {
@@ -15,10 +16,11 @@ export default async function BelajarNextJs() {
         console.error("Error reading file:", error);
         text = "Gagal memuat konten.";
     }
+    const html = marked(text);
     return (
         <>
             <Heading>Belajar Next.js</Heading>
-            <p>{text}</p>
+            <article dangerouslySetInnerHTML={{ __html: html }} />
             <img src="/images/landing5.jpg" alt="" width={640} height={360} className="my-3 rounded-xl" />
         </>
     );
