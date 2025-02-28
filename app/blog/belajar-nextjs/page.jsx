@@ -20,8 +20,8 @@ export default async function BelajarNextJs() {
     return (
         <>
             <Heading>Belajar Next.js</Heading>
-            <article dangerouslySetInnerHTML={{ __html: html }} />
             <img src="/images/landing5.jpg" alt="" width={640} height={360} className="my-3 rounded-xl" />
+            <article dangerouslySetInnerHTML={{ __html: html }} className="prose max-w-screen-sm prose-slate" />
         </>
     );
 }
