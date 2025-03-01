@@ -4,10 +4,6 @@ import { useEffect } from "react";
 
 export default function BlogLayout({ children })
 {
-    // useEffect(() => {
-    //     window.confirm("Do you want to enter the blog page?");
-    // }, []);
-    console.log('Production Mode: gunakan npm run build & npm start. agar semua modul sudah dirender dalam file .next, sehingga lebih ringan dalam mode prodcution! kalau npm run dev, semua modul dirender terus!');
     return (
         <>
             <div className="grid grid-cols-12 gap-4">
