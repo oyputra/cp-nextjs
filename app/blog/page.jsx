@@ -1,12 +1,15 @@
 import Card from "@/components/Card";
 import Heading from "@/components/Heading";
 import PostCard from "@/components/PostCard";
+import { getAllPosts } from "@/lib/post";
 
 export const metadata = {
     title: "Blog - Belajar Next.js Fundamental"
 }
 
-export default function Blog() {
+export default async function Blog() {
+    const posts = await getAllPosts();
+    console.log(posts);
     return (
         <>
             <Heading>Blog</Heading>
