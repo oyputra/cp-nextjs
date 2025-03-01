@@ -1,3 +1,10 @@
+---
+title: "Belajar Next.js"
+image: "/images/landing5.jpg"
+date: "01/03/2025"
+author: "admin"
+---
+
 ## With Tailwind CSS
 next/font can be used with Tailwind CSS through a CSS variable.
 

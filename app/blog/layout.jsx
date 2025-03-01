@@ -4,24 +4,23 @@ import { useEffect } from "react";
 
 export default function BlogLayout({ children })
 {
-    useEffect(() => {
-        window.confirm("Do you want to enter the blog page?");
-    }, []);
+    // useEffect(() => {
+    //     window.confirm("Do you want to enter the blog page?");
+    // }, []);
     console.log('Production Mode: gunakan npm run build & npm start. agar semua modul sudah dirender dalam file .next, sehingga lebih ringan dalam mode prodcution! kalau npm run dev, semua modul dirender terus!');
     return (
         <>
-            <ul className="flex gap-3 pb-5">
-                <p>List of Posts :</p>
-                <li><Link href={"/blog"} className="text-gray-500 hover:underline">Blog</Link></li>
-                <li><Link href={"/blog/belajar-nextjs"} className="text-gray-500 hover:underline">Belajar Next Js</Link></li>
-                <li><Link href={"/blog/judul-berita"} className="text-gray-500 hover:underline">Judul Berita</Link></li>
-                <li><Link href={"/blog/latihan-route-next"} className="text-gray-500 hover:underline">Latihan Route Next</Link></li>
-            </ul>
-            <div style={{ display: 'flex' }}>
-                <div style={{ border: '1px solid black' }} className="mr-5">
-                    Sidebar
+            <div className="grid grid-cols-12 gap-4">
+                <div className="col-span-2">
+                    <ul className="flex flex-col gap-3 pr-5 text-gray-700">
+                        <p>List of Posts :</p>
+                        <li><Link href={"/blog"} className="hover:bg-blue-100 hover:border border border-transparent hover:text-blue-900 hover:border-blue-200 rounded-md p-3 block">Blog</Link></li>
+                        <li><Link href={"/blog/belajar-nextjs"} className="hover:bg-blue-100 hover:border border border-transparent hover:text-blue-900 hover:border-blue-200 rounded-md p-3 block">Belajar Next Js</Link></li>
+                        <li><Link href={"/blog/judul-berita"} className="hover:bg-blue-100 hover:border border border-transparent hover:text-blue-900 hover:border-blue-200 rounded-md p-3 block">Judul Berita</Link></li>
+                        <li><Link href={"/blog/latihan-route-next"} className="hover:bg-blue-100 hover:border border border-transparent hover:text-blue-900 hover:border-blue-200 rounded-md p-3 block">Latihan Route Next</Link></li>
+                    </ul>
                 </div>
-                <div>{children}</div>
+                <div className="col-span-10">{children}</div>
             </div>
         </>
     );
