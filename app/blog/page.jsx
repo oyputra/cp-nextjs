@@ -36,30 +36,17 @@ export default async function Blog() {
             </div>
 
             <div>
-                <PostCard
-                    title={"Belajar Next.js"}
-                    href={"/blog/belajar-nextjs"}
-                    image={"/images/landing5.jpg"}
-                    description={"Membuat e-commerce from zero to hero"}
-                    date={"23-02-2025"}
-                    author={"@oyputra"}
-                />
-                <PostCard
-                    title={"Judul Berita"}
-                    href={"/blog/judul-berita"}
-                    image={"/images/landing6.jpg"}
-                    description={"Berita terbaru dari judul-judul berita yang relevan"}
-                    date={"23-02-2025"}
-                    author={"@oyputra"}
-                />
-                <PostCard
-                    title={"Latihan Route Next"}
-                    href={"/blog/latihan-route-next"}
-                    image={"/images/landing7.jpg"}
-                    description={"Membuat route pada next js dengan perbedaan-perbedaan metodenya"}
-                    date={"23-02-2025"}
-                    author={"@oyputra"}
-                />
+                {posts.map((post, index) => (
+                    <PostCard
+                        key={index}
+                        title={post.title}
+                        href=""
+                        image={post.image}
+                        description=""
+                        date={post.date}
+                        author={post.author}
+                    />
+                ))}
             </div>
         </>
     );
