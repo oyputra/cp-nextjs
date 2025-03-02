@@ -1,5 +1,6 @@
 ---
 title: "Belajar Next.js"
+description: "Exercitation pariatur sunt consequat esse amet officia dolor pariatur."
 image: "/images/landing5.jpg"
 date: "01/03/2025"
 author: "admin"

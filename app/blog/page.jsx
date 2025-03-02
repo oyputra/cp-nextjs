@@ -15,24 +15,17 @@ export default async function Blog() {
             <Heading>Blog</Heading>
             <p className="text-xl mb-3">List of Post</p>
             <div className="grid xl:grid-cols-4 gap-4 mb-20">
-                <Card
-                    srcImage={"/images/landing5.jpg"}
-                    title={"Belajar Next.js"}
-                    description={"Membuat e-commerce from zero to hero"}
-                    link={"/blog/belajar-nextjs"}
-                />
-                <Card
-                    srcImage={"/images/landing6.jpg"}
-                    title={"Judul Berita"}
-                    description={"Berita terbaru dari judul-judul berita yang relevan"}
-                    link={"/blog/judul-berita"}
-                />
-                <Card
-                    srcImage={"/images/landing7.jpg"}
-                    title={"Latihan Route Next"}
-                    description={"Membuat route pada next js dengan perbedaan-perbedaan metodenya"}
-                    link={"/blog/latihan-route-next"}
-                />
+                {posts.map((post, index) => (
+                    <Card
+                        key={index}
+                        title={post.title}
+                        description={post.description}
+                        image={post.image}
+                        slug={`/blog/${post.slug}`}
+                        date={post.date}
+                        author={post.author}
+                    />
+                ))}
             </div>
 
             <div>
@@ -40,9 +33,9 @@ export default async function Blog() {
                     <PostCard
                         key={index}
                         title={post.title}
-                        href=""
+                        description={post.description}
                         image={post.image}
-                        description=""
+                        slug={`/blog/${post.slug}`}
                         date={post.date}
                         author={post.author}
                     />
