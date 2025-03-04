@@ -1,7 +1,7 @@
 import Heading from "@/components/Heading";
 
 export const metadata = {
-    title: "Kontak - Belajar Next.js Fundamental"
+    title: "Kontak"
 }
 
 export default function Contact() {

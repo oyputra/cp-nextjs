@@ -1,8 +1,21 @@
 import Heading from "@/components/Heading";
 import { getPost } from "@/lib/post";
 import { notFound } from "next/navigation";
-export const metadata = {
-    title: "Belajar Next.js - Belajar Next.js Fundamental"
+
+export async function generateMetadata({ params }) {
+    const { slug } = params;
+    try {
+        const post = await getPost(slug);
+        return {
+            title: post.title,
+            description: post.description,
+        }
+    } catch (error) {
+        return {
+            title: "Post Tidak Ditemukan",
+            description: "Maaf, konten yang Anda cari tidak tersedia.",
+        };
+    }
 }
 
 export default async function PostPage({ params }) {    

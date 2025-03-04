@@ -4,7 +4,7 @@ import PostCard from "@/components/PostCard";
 import { getAllPosts } from "@/lib/post";
 
 export const metadata = {
-    title: "Blog - Belajar Next.js Fundamental"
+    title: "Blog"
 }
 
 export default async function Blog() {

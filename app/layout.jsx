@@ -2,8 +2,12 @@ import Navbar from "@/components/Navbar";
 import "./global.css";
 import { poppins, roboto } from "./fonts";
 
+const title = "Situs Next.js";
 export const metadata = {
-    title: "Situs Next.js",
+    title: {
+        default: title,
+        template: `%s | ${title}`,
+    },
     description: "Kumpulan tutorial belajar Next.js dari Dasar",
 };
 
