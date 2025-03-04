@@ -3,8 +3,8 @@ import "./global.css";
 import { poppins, roboto } from "./fonts";
 
 export const metadata = {
-    title: "Belajar Next.js Fundamental",
-    description: "Belajar Next.js dengan struktur App Router",
+    title: "Situs Next.js",
+    description: "Kumpulan tutorial belajar Next.js dari Dasar",
 };
 
 export default async function Layout({ children }) { 
