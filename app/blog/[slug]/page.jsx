@@ -2,6 +2,7 @@ import Heading from "@/components/Heading";
 import { getPost } from "@/lib/post";
 import { notFound } from "next/navigation";
 
+// Membuat Metadata Lebih Dinamis Untuk Seo Friendly
 export async function generateMetadata({ params }) {
     const { slug } = params;
     try {
