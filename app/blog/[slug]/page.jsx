@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 // Membuat Metadata Lebih Dinamis Untuk Seo Friendly
 export async function generateMetadata({ params }) {
-    const { slug } = params;
+    const { slug } = await params;
     try {
         const post = await getPost(slug);
         return {
