@@ -1,4 +1,5 @@
 import Heading from "@/components/Heading";
+import ShareLinkButton from "@/components/ShareLinkButton";
 import { getPost } from "@/lib/post";
 import { notFound } from "next/navigation";
 
@@ -26,7 +27,10 @@ export default async function PostPage({ params }) {
         return (
             <>
                 <Heading>{post.title}</Heading>
-                <p className="text-sm mb-5 text-gray-500">{post.author} - {post.date}</p>
+                <div className="flex gap-3 items-baseline">
+                    <p className="text-sm mb-5 text-gray-500">{post.author} - {post.date}</p>
+                    <ShareLinkButton/>
+                </div>
                 <img src={post.image} alt="" width={640} height={360} className="mb-5 rounded-xl" />
                 <article dangerouslySetInnerHTML={{ __html: post.body }} className="prose max-w-screen-sm prose-slate" />
             </>
