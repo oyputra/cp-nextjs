@@ -9,7 +9,6 @@ export const metadata = {
 
 export default async function Blog() {
     const posts = await getAllPosts();
-    console.log(posts);
     return (
         <>
             <Heading>Blog</Heading>
